@@ -1,0 +1,5 @@
+type(SX-TX.X): description courte
+
+# Types : feat | fix | docs | test | chore
+# Exemple : docs(S1-T1.1): ajouter les notes sur le cycle de scan
+# Closes #numéro_issue
