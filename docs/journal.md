@@ -7,6 +7,7 @@
 
 ## Semaine 1 : Fondamentaux & Premier circuit Ladder
 - Réalisation T1.1 : Synthèse complète rédigée sur le principe du cycle de scan (PII, exécution logique, PIO, housekeeping/Watchdog) et l'adressage IEC 61131-3 (%IX, %QX, %MX, tailles X/B/W/D).
+- Réalisation T1.2 : Rédaction de la fiche de cours complète (`docs/fiche-cours-s1.md`) sur les fondamentaux PLC (architecture hardware, optocoupleurs, câblage Sourcing PNP / Sinking NPN, principe de sécurité positive, temporisateurs TON/TOF/TP, compteurs CTU/CTD et règle d'or d'interdiction de double bobine).
 - Réalisation T1.3 : Conception du circuit de démarrage moteur sous OpenPLC Editor v4 (`ex01_moteur`).
 - Tests et validation :
   1. Marche avec auto-maintien : impulsion sur `bp_marche` (%IX0.0) -> maintien de la bobine `moteur` (%QX0.0) via son contact auxiliaire en dérivation.
