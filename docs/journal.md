@@ -21,3 +21,9 @@
   4. Bouclage automatique permanent via le contact NF de réinitialisation `[/ T_rouge.Q]`.
 - Preuves enregistrées dans `docs/preuves/t1.1-premier-programme.png`, `docs/preuves/t1.3-ex01-moteur-simulation_arret_normal.png`, `docs/preuves/t1.3-ex01-moteur-simulation_E-Stop.png` et `docs/preuves/t1.4-ex02-feu-simulation.png`.
 - Réalisation T1.5 (Partie 1/3 - `ex03_compteur`) : Conception et validation du compteur de pièces de lot avec le bloc standard `CTU`. Testé : incrémentation par impulsion capteur (%IX0.0), arrêt automatique du convoyeur (%QX0.0) et allumage du voyant carton plein (%QX0.1) à la consigne (PV=5), réarmement et remise à zéro par `bp_reset` (%IX0.1).
+- Réalisation T1.5 (Partie 2/3 - `ex04_alarme`) : Conception et validation du système d'alarme avec acquittement combinant temporisateurs `TON` et bobines `Set/Reset`.
+  1. Générateur de clignotement à 1 Hz (oscillateur 500ms ON / 500ms OFF par rebouclage de deux blocs `TON` : `clk_on` et `clk_off`).
+  2. Alerte active non acquittée (`capteur_niveau` = 1, `acquitte` = 0) : voyant d'alarme (%QX0.0) clignotant et sirène sonore (%QX0.1) enclenchée.
+  3. Acquittement opérateur (`bp_ack` = 1 sur %IX0.1) : mémorisation par bobine Set (`S acquitte`), coupure immédiate de la sirène et bascule du voyant en allumé fixe.
+  4. Fin d'alerte (`capteur_niveau` = 0) : extinction du voyant et réarmement automatique par bobine Reset (`R acquitte`).
+- Preuves T1.5 enregistrées dans `docs/preuves/t1.5-ex03_compteur.png` et `docs/preuves/t1.5-ex04_alarme.png`.
