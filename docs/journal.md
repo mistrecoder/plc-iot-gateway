@@ -19,4 +19,5 @@
   2. Phase 2 - Orange (%QX0.1) : temporisé 3s (`T_orange`).
   3. Phase 3 - Rouge (%QX0.2) : temporisé 5s (`T_rouge`).
   4. Bouclage automatique permanent via le contact NF de réinitialisation `[/ T_rouge.Q]`.
-- Preuves enregistrées dans `docs/preuves/t1.1-premier-programme.png`, `docs/preuves/t1.3-ex01-moteur-simulation_arret_normal.png` et `docs/preuves/t1.3-ex01-moteur-simulation_E-Stop.png`.
+- Preuves enregistrées dans `docs/preuves/t1.1-premier-programme.png`, `docs/preuves/t1.3-ex01-moteur-simulation_arret_normal.png`, `docs/preuves/t1.3-ex01-moteur-simulation_E-Stop.png` et `docs/preuves/t1.4-ex02-feu-simulation.png`.
+- Réalisation T1.5 (Partie 1/3 - `ex03_compteur`) : Conception et validation du compteur de pièces de lot avec le bloc standard `CTU`. Testé : incrémentation par impulsion capteur (%IX0.0), arrêt automatique du convoyeur (%QX0.0) et allumage du voyant carton plein (%QX0.1) à la consigne (PV=5), réarmement et remise à zéro par `bp_reset` (%IX0.1).
