@@ -31,4 +31,4 @@
   2. Conditionnement par lots avec compteur standard `CTU` (consigne PV=5) : arrêt automatique du convoyeur `%QX0.0` dès détection du carton plein, allumage du `voyant_lot_plein` (%QX0.1) et réarmement par `bp_reset_lot` (%IX0.6).
   3. Gestion d'alarme de bourrage : oscillateur 1 Hz (`flash` piloté par `clk_on` et `clk_off` à 500ms), avertisseur sonore (`sirene` sur %QX0.3), mémorisation d'acquittement (`Set`/`Reset` sur `acquitte` via `bp_ack` sur %IX1.0), voyant d'alarme (%QX0.2) clignotant puis fixe, et coupure de sécurité immédiate du convoyeur sur défaut actif (`capteur_bourrage` sur %IX0.7).
 - Validation du Jalon 1 (J1) : Les 5 exercices Ladder fondamentaux (Ex01 à Ex05) sont tous modélisés, câblés et opérationnels.
-- Preuves T1.5 enregistrées dans `docs/preuves/t1.5-ex03_compteur.png` et `docs/preuves/t1.5-ex04_alarme.png`.
+- Preuves T1.5 enregistrées dans `docs/preuves/t1.5-ex03_compteur.png`, `docs/preuves/t1.5-ex04_alarme.png` et `docs/preuves/t1.5-ex05_process_combine_p1.png` à `p3.png`.
