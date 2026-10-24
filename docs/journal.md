@@ -26,4 +26,9 @@
   2. Alerte active non acquittée (`capteur_niveau` = 1, `acquitte` = 0) : voyant d'alarme (%QX0.0) clignotant et sirène sonore (%QX0.1) enclenchée.
   3. Acquittement opérateur (`bp_ack` = 1 sur %IX0.1) : mémorisation par bobine Set (`S acquitte`), coupure immédiate de la sirène et bascule du voyant en allumé fixe.
   4. Fin d'alerte (`capteur_niveau` = 0) : extinction du voyant et réarmement automatique par bobine Reset (`R acquitte`).
+- Réalisation T1.5 (Partie 3/3 - `ex05_process_combine`) : Conception et validation du processus combiné industriel intégrant les 3 briques fonctionnelles :
+  1. Pilotage du convoyeur en double commande (Poste 1 local `%IX0.0`/`%IX0.1`, Poste 2 déporté `%IX0.2`/`%IX0.3`) avec auto-maintien et coupure prioritaire par arrêt d'urgence `%IX0.4`.
+  2. Conditionnement par lots avec compteur standard `CTU` (consigne PV=5) : arrêt automatique du convoyeur `%QX0.0` dès détection du carton plein, allumage du `voyant_lot_plein` (%QX0.1) et réarmement par `bp_reset_lot` (%IX0.6).
+  3. Gestion d'alarme de bourrage : oscillateur 1 Hz (`flash` piloté par `clk_on` et `clk_off` à 500ms), avertisseur sonore (`sirene` sur %QX0.3), mémorisation d'acquittement (`Set`/`Reset` sur `acquitte` via `bp_ack` sur %IX1.0), voyant d'alarme (%QX0.2) clignotant puis fixe, et coupure de sécurité immédiate du convoyeur sur défaut actif (`capteur_bourrage` sur %IX0.7).
+- Validation du Jalon 1 (J1) : Les 5 exercices Ladder fondamentaux (Ex01 à Ex05) sont tous modélisés, câblés et opérationnels.
 - Preuves T1.5 enregistrées dans `docs/preuves/t1.5-ex03_compteur.png` et `docs/preuves/t1.5-ex04_alarme.png`.
